@@ -2,6 +2,7 @@ package com.hxm.hjycommunity.web;
 
 import com.hxm.hjycommunity.common.core.domain.BaseResponse;
 import com.hxm.hjycommunity.common.core.domain.User;
+import com.hxm.hjycommunity.common.core.exception.BaseException;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.annotation.Validated;
@@ -35,6 +36,13 @@ public class UserController {
         }
 
         return BaseResponse.success("OK");
+    }
+
+    @RequestMapping("/queryUser")
+    public BaseResponse queryUser(User user) {
+
+        //模拟查询失败抛出异常
+        throw new BaseException("500", "测试异常类！");
     }
 
 
