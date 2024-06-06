@@ -1,9 +1,12 @@
 package com.hxm.hjycommunity.common.core.domain;
 
+import javax.validation.constraints.NotNull;
+
 public class User {
 
     private String userId;
 
+    @NotNull(message = "username 不能为空")
     private String username;
 
     public User() {
