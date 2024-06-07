@@ -3,6 +3,7 @@ package com.hxm.hjycommunity.common.core.controller;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.hxm.hjycommunity.common.core.constant.HttpStatus;
+import com.hxm.hjycommunity.common.core.domain.BaseResponse;
 import com.hxm.hjycommunity.common.core.page.PageDomain;
 import com.hxm.hjycommunity.common.core.page.PageResult;
 import com.hxm.hjycommunity.common.core.utils.ServletUtils;
@@ -70,5 +71,14 @@ public class BaseController {
         pageResult.setTotal(new PageInfo(list).getTotal());
 
         return pageResult;
+    }
+
+    /**
+     * 响应返回结果
+     * @param rows 受影响行数
+     * @return: com.msb.hjycommunity.common.core.domain.BaseResponse
+     */
+    protected BaseResponse toAjax(int rows){
+        return rows > 0 ? BaseResponse.success(rows) : BaseResponse.fail("操作失败");
     }
 }
