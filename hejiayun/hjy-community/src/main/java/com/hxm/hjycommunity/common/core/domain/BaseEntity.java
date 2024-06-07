@@ -9,10 +9,11 @@ import java.util.Date;
 import java.util.Map;
 
 
+
 /**
+ * @Author: hins_xm
  * Entity 基类
- * @author spikeCong
- * @date 2023/2/23
+ * @DateTime: 2024/6/7 12:37
  **/
 public class BaseEntity implements Serializable {
 

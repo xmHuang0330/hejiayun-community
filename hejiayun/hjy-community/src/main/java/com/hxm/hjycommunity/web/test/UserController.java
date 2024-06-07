@@ -1,4 +1,4 @@
-package com.hxm.hjycommunity.web;
+package com.hxm.hjycommunity.web.test;
 
 import com.hxm.hjycommunity.common.core.domain.BaseResponse;
 import com.hxm.hjycommunity.common.core.domain.User;
