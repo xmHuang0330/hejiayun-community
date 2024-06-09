@@ -1,4 +1,4 @@
-package com.hxm.hjycommunity.web.controller;
+package com.hxm.hjycommunity.web.controller.community;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
