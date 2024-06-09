@@ -21,8 +21,41 @@ public class LogDemo {
 
 
     @Test
-    public void testLog(){
-        Logger logger = LoggerFactory.getLogger(LogDemo.class);
+    public void testLog() {
         logger.info("Hello LogBack!");
     }
+
+    @Test
+    public void testLog2() {
+        logger.trace("trace。。。。");
+        logger.debug("debugger、、、、");
+        logger.info("Hello LogBack、、、、、");
+        logger.warn("warning!!!");
+        logger.error("error!!!!");
+    }
+
+    @Test
+    public void testLog3() {
+        String name = "kkkkkk";
+        logger.info("hello:" + name);
+        logger.info("hello {}", name);
+
+        String userId = "10019";
+        String orderId = "sdvfvfbdfbdbfbdbgngf";
+        logger.info("记录当前订单的userId:[{}]和orderId:[{}]", userId, orderId);
+
+        try {
+            int i = 1 / 0;
+        } catch (Exception e) {
+            logger.error("/ by zero", e
+            );
+        }
+
+        if (logger.isDebugEnabled()) {
+            logger.debug("hello" + name);
+
+        }
+    }
+
+
 }
